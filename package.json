@@ -1,0 +1,28 @@
+{
+  "name": "professional-readme",
+  "version": "1.0.0",
+  "description": "A professional README.md generator that makes it easy to create README.md files for any project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jahneo/readmeGenerator.git"
+  },
+  "keywords": [
+    "licenses",
+    "badges",
+    "node"
+  ],
+  "author": "Neil Hall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jahneo/readmeGenerator/issues"
+  },
+  "homepage": "https://github.com/Jahneo/readmeGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {}
+}
