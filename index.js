@@ -2,8 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 //console.log(inquirer);
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'input',
       name: 'title',
@@ -44,7 +43,7 @@ inquirer
       {
         type: 'confirm',
         name: 'install',
-        message: 'What you like to provide installation instructions?',
+        message: 'Would you like to provide installation instructions?',
       },
       {
         type: 'input',
@@ -57,13 +56,13 @@ inquirer
       {
         type: 'confirm',
         name: 'usage',
-        message: 'What you like to provide user usage information?',
+        message: 'would you like to provide user usage information?',
       },
       
       {
         type: 'input',
         name: 'usageInfo',
-        message: `Please add your usage info`,
+        message: `Please add your user usage info`,
         when: function (answers) {
             return answers.usage;
         }
@@ -117,7 +116,7 @@ inquirer
           return answers.credits;
       }
   },
-  ])
+  ]
 
 // TODO: Create a function to write README file
 
