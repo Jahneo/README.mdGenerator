@@ -1,7 +1,15 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-//console.log(inquirer);
+const chalk = require('chalk');
+const generateMarkdown = require('./assets/generateMarkdown.js');
+console.log(inquirer);
+
+//Success message
+const success = chalk.greenBright(`
+Great Success! README Generated! It's in the Output folder
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// 
+`);
 const questions = [
     {
       type: 'input',
@@ -44,15 +52,16 @@ const questions = [
         type: 'confirm',
         name: 'install',
         message: 'Would you like to provide installation instructions?',
-      },
-      {
-        type: 'input',
-        name: 'installNotes',
-        message: `Please add your installation notes`,
-        when: function (answers) {
-            return answers.install;
-        }
+      
+      
     },
+    {
+      type: 'input',
+      name: 'install',
+      message: 'Would you like to provide installation instructions?',
+    
+    
+  },
       {
         type: 'confirm',
         name: 'usage',
@@ -61,11 +70,9 @@ const questions = [
       
       {
         type: 'input',
-        name: 'usageInfo',
+        name: 'usage',
         message: `Please add your user usage info`,
-        when: function (answers) {
-            return answers.usage;
-        }
+        
     },
     
       {
@@ -73,11 +80,12 @@ const questions = [
         name: 'guides',
         message: 'Do you want to add contributing guidelines?'
       },
+      
       {
         type: 'input',
-        name: 'contribNotes',
+        name: 'guides',
         message: `Please add your what you want the user to know about contributing to the repo`,
-        when: function (answers) {
+        then: function (answers) {
             return answers.guides;
         }
     },
@@ -91,7 +99,7 @@ const questions = [
         type: 'input',
         name: 'testNotes',
         message: `Please add your instructions for running tests`,
-        when: function (answers) {
+        then: function (answers) {
             return answers.test;
         }
       },
@@ -112,15 +120,15 @@ const questions = [
       type: 'input',
       name: 'creditData',
       message: `Please add your credits`,
-      when: function (answers) {
-          return answers.credits;
+      then: function (answers) {
+        return answers.credits;
       }
   },
   ]
 
 // TODO: Create a function to write README file
 
-const writeToFile = (fileName, data) => {
+const writeToFile = (filename, data) => {
   fs.writeFile(filename,data, (err) =>
   err ? console.error(err) :console.log(success)
   );
@@ -128,7 +136,18 @@ const writeToFile = (fileName, data) => {
 
 
 // TODO: Create a function to initialize app
-function init() {}
+//Function to initialize the generator 
+const init = async () => {
+  try {
+      //await inquirer.prompt(welcome);
+     // console.log(letsGo);
+      const data = await inquirer.prompt(questions);
+      writeToFile('./output/README.md', generateMarkdown(data));
+  } catch (err) {
+      console.log(err);
+  }
+}
+
 
 // Function call to initialize app
 init();
