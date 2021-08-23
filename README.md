@@ -37,4 +37,5 @@
    - Some areas sdai undefined
    ![Undefined](./images/undefined.PNG)
    # **Video of Project**
-    ![Video](https://drive.google.com/file/d/1UD9MsBqV3ahq_9538Ay8QzFAxEa6S8yv/view)
+    
+    [![Video](./images/video_image.PNG)](https://www.yohttps://drive.google.com/file/d/1UD9MsBqV3ahq_9538Ay8QzFAxEa6S8yv/view)
