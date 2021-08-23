@@ -38,4 +38,4 @@
    ![Undefined](./images/undefined.PNG)
    # **Video of Project**
     
-    [![Video](./images/video_image.PNG)](https://www.yohttps://drive.google.com/file/d/1UD9MsBqV3ahq_9538Ay8QzFAxEa6S8yv/view)
+    ![Video image](./images/video_image.PNG)]
