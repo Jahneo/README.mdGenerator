@@ -27,7 +27,7 @@
    - nmp init 
    - node index ( run program)
    - console.log(inquirer) ensure package was installed
-    ![Packages Installed]('./images/inquirer_package.PNG')
+    ![Packages Installed](./images/inquirer_package.PNG)
    
    # **ReadME.md **
    ![README](./images/README.PNG)
