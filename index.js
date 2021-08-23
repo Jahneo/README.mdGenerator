@@ -5,11 +5,13 @@ const chalk = require('chalk');
 const generateMarkdown = require('./assets/generateMarkdown.js');
 //console.log(inquirer);
 
-//Success message
+//Success message if README.md is created
 const success = chalk.greenBright(`
 Great Success! README Generated! It's in the Output folder
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// 
 `);
+
+// prompt users for input
 const questions = [
     {
       type: 'input',
@@ -41,7 +43,7 @@ const questions = [
                     
                 },
     },
-    
+    // prompt user and return answers to add to README.md
     {
         type: 'input',
         name: 'description',
@@ -108,7 +110,7 @@ const questions = [
       type: 'rawlist',
       name: 'licences',
       message: 'What are the licenses you want to use?',
-      
+      // chioce of licences
       choices: ['none','GNU GPLv2.0', 'GNU GPLv3.0', 'MIT', 'Mozilla Public 2.0','Apache 2.0', 'BSD 2-Clause', 'BSD 3-Clause', 'GNU AGPLv3.0'],
       
     },

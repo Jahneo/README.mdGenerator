@@ -1,44 +1,39 @@
 
 
- # **ddddddd**
- 
- # Table of Contents
- * [Project Description](#project-description)
- * [Installation](#installation)
- * [Usage](#usage)
- * [Contribution](#contributions)
- * [Test](#test)
- * [License](#license)
- * [License Badge](#License-Badges)
- * [Credit](#credits)
- * [Questions](#questions)
+ # **Task**
+ - Create an open source project in Github
+ - Use command line with the help of node.js to create a README.md file
+# **User Story**
+ - As a developer
+ - I want a README generator
+    - so i can quickly create a professional README for a project
+ # **Acceptance Criteria
+  - GIVEN a command-line application that accepts user input
+  - WHEN I am prompted for information about my application repository
+  - Table of contents
+  - Links to and from table of contents
+  - Contributing factors
+    - Installation tips
+        - Usage information
+            - License and badges
+                - Credits
+   - Links to email and Github profile
+   # **Getting Started**
+   - Clone respository with starter files and instructions
+   - create .gitignore files and includes node module and dependencies
+   - Create codes to handle users input and populate README.md files
 
- # Project Description
- ccccccccccc
+   # **Installation**
+   - nmp init 
+   - node index ( run program)
+   - console.log(inquirer) ensure package was installed
+    ![Packages Installed]('./images/inquirer_package.PNG')
+   
+   # **ReadME.md **
+   ![README](./images/README.PNG)
 
- # Installation
- true
-
- # Usage
- false
-
- # Contribution
- false
-
- # Test
- false
-
- # License
- none
-
- # License Badge
- # [![License Badge](https://img.shields.io/badge/License-none%202.0-blue.svg)](https://opensource.org/licenses/none)
-
- # Credit
-
- false
- # Questions
-  If you have any questions, please contact the project owner by clicking on the email listed below.  
-  
-  ![user image](undefined)
-  #### [a@aim.com](mailto:a@aim.com)
+   # ** Issues **
+   - Getting inputs to correctly populate README
+   - Some areas sdai undefined
+   ![Undefined](./images/undefined.PNG)
+   
