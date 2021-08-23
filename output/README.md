@@ -14,28 +14,28 @@
  * [Questions](#questions)
 
  # Project Description
- The project creates readme.md files for any project populated by users input
+ The project allows a readme.md file to be generated from uers input. The user gives the naes and other information that is used to populate the readme file addinf title table of contents and all details
 
  # Installation
- Create .gitignore files and set it to ignore all node modules and dependency after install all modules 
+ Creat .gitignore file and set it to ignore node modules and dependencies 
 
  # Usage
- Be acreful with nodes
+ Proceed with caution
 
  # Contribution
- It optional
+ Its optional
 
  # Test
- Be carefull and install modules
+ Download all packages needed
 
  # License
- GNU GPLv3.0
+ MIT
 
  # License Badge
- # [![License Badge](https://img.shields.io/badge/License-GNU GPLv3.0%202.0-blue.svg)](https://opensource.org/licenses/GNU GPLv3.0)
+ # [![License Badge](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
 
  # Credit
- thanks
+ Thanks to all!!!!
 
  # Questions
   If you have any questions, please contact Neil Hallthe project owner by clicking on the email listed below.  
