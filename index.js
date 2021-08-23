@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const generateMarkdown = require('./assets/generateMarkdown.js');
-console.log(inquirer);
+//console.log(inquirer);
 
 //Success message
 const success = chalk.greenBright(`
@@ -45,63 +45,64 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Would you like to give a brief description of your project?',
+        message: 'Please write a brief description of your project?',
       },
       
       {
         type: 'confirm',
         name: 'install',
         message: 'Would you like to provide installation instructions?',
-      
-      
+        then:function (answers) {
+          return answers.install;
+      } 
     },
     {
       type: 'input',
-      name: 'install',
-      message: 'Would you like to provide installation instructions?',
-    
-    
+      name: 'installs',
+      message: `Please add your installation instructions`,
+     then:function (answers) {
+        return answers.install;
+    }
   },
+    
       {
         type: 'confirm',
         name: 'usage',
         message: 'would you like to provide user usage information?',
-      },
       
-      {
         type: 'input',
-        name: 'usage',
+        name: 'usageInfo',
         message: `Please add your user usage info`,
-        
+      then: function (answers) {
+          return answers.usage;
+      }
     },
     
       {
         type: 'confirm',
         name: 'guides',
-        message: 'Do you want to add contributing guidelines?'
-      },
+        message: 'Do you want to add contributing guidelines?',
       
-      {
         type: 'input',
-        name: 'guides',
+        name: 'guidesLines',
         message: `Please add your what you want the user to know about contributing to the repo`,
         then: function (answers) {
-            return answers.guides;
-        }
+          return answers.guides;
+      }
     },
     
       {
         type: 'confirm',
-        name: 'test',
-        message: 'Do you want to add test instructions?'
+        name: 'tests',
+        message: 'Do you want to add test instructions?',
       },
       {
         type: 'input',
-        name: 'testNotes',
+        name: 'testinfo',
         message: `Please add your instructions for running tests`,
         then: function (answers) {
-            return answers.test;
-        }
+           return answers.tests;
+       }
       },
     {
       type: 'rawlist',
@@ -118,7 +119,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'creditData',
+      name: 'creditInfo',
       message: `Please add your credits`,
       then: function (answers) {
         return answers.credits;
@@ -139,8 +140,6 @@ const writeToFile = (filename, data) => {
 //Function to initialize the generator 
 const init = async () => {
   try {
-      //await inquirer.prompt(welcome);
-     // console.log(letsGo);
       const data = await inquirer.prompt(questions);
       writeToFile('./output/README.md', generateMarkdown(data));
   } catch (err) {
